@@ -1,0 +1,226 @@
+{
+    "info": {
+        "_postman_id": "d519c8cf-9e41-4b99-9f08-136bca9418f5",
+        "name": "Prospa Collection",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Sample endpoint: Returns details about a particular user",
+            "id": "3569ba39-856f-47e5-9d14-55f5be224d23",
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "{{baseUrl}}/user?id=13539054",
+                    "host": [
+                        "{{baseUrl}}"
+                    ],
+                    "path": [
+                        "user"
+                    ],
+                    "query": [
+                        {
+                            "description": "(Required) ID of the user",
+                            "key": "id",
+                            "value": "13539054"
+                        }
+                    ]
+                }
+            },
+            "response": [
+                {
+                    "id": "d509c41b-f684-4691-9cf5-13ecf897471b",
+                    "name": "Sample response: Details about a user by ID",
+                    "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "description": "Added as a part of security scheme: basic",
+                                "key": "Authorization",
+                                "value": "Basic <credentials>"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/user?id=13539054",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "user"
+                            ],
+                            "query": [
+                                {
+                                    "key": "id",
+                                    "value": "13539054"
+                                }
+                            ]
+                        }
+                    },
+                    "status": "OK",
+                    "code": 200,
+                    "_postman_previewlanguage": "Text",
+                    "header": [
+                        {
+                            "disabled": false,
+                            "description": {
+                                "content": "A link to the next page of responses",
+                                "type": "text/plain"
+                            },
+                            "key": "x-next",
+                            "value": "in laborum"
+                        },
+                        {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                        }
+                    ],
+                    "cookie": [],
+                    "responseTime": null,
+                    "body": "{\n \"id\": 44663491,\n \"name\": \"qui ea exercitation ipsum\",\n \"tag\": \"nostrud amet\"\n}"
+                },
+                {
+                    "id": "771f4484-093e-4312-b629-433e46fe9f04",
+                    "name": "Unexpected error",
+                    "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "description": "Added as a part of security scheme: basic",
+                                "key": "Authorization",
+                                "value": "Basic <credentials>"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/user?id=13539054",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "user"
+                            ],
+                            "query": [
+                                {
+                                    "key": "id",
+                                    "value": "13539054"
+                                }
+                            ]
+                        }
+                    },
+                    "status": "Internal Server Error",
+                    "code": 500,
+                    "_postman_previewlanguage": "Text",
+                    "header": [
+                        {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                        }
+                    ],
+                    "cookie": [],
+                    "responseTime": null,
+                    "body": "{\n \"code\": -59242536,\n \"message\": \"fugiat elit\"\n}"
+                },
+                {
+                    "id": "8ea6f5a2-a280-4805-aefb-d4919bc197e5",
+                    "name": "ex3",
+                    "originalRequest": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "https://a36980e0-90c2-4109-989b-e0869c6bc69e.mock.pstmn.io/user?id=13539054",
+                            "protocol": "https",
+                            "host": [
+                                "a36980e0-90c2-4109-989b-e0869c6bc69e",
+                                "mock",
+                                "pstmn",
+                                "io"
+                            ],
+                            "path": [
+                                "user"
+                            ],
+                            "query": [
+                                {
+                                    "description": "(Required) ID of the user",
+                                    "key": "id",
+                                    "value": "13539054"
+                                }
+                            ]
+                        }
+                    },
+                    "status": "OK",
+                    "code": 200,
+                    "_postman_previewlanguage": "Text",
+                    "header": [
+                        {
+                            "key": "Content-Type",
+                            "value": "application/json; charset=utf-8",
+                            "enabled": true
+                        },
+                        {
+                            "key": "x-next",
+                            "value": "in laborum",
+                            "enabled": true
+                        }
+                    ],
+                    "cookie": [],
+                    "responseTime": null,
+                    "body": "{\n    \"id\": 446634943243241,\n    \"name\": \"qui ea exercitation ipsum\",\n    \"tag\": \"nostrud amet\"\n}"
+                }
+            ]
+        }
+    ],
+    "auth": {
+        "type": "basic",
+        "basic": [
+            {
+                "key": "username",
+                "value": "<Basic Auth Username>",
+                "type": "string"
+            },
+            {
+                "key": "password",
+                "value": "<Basic Auth Password>",
+                "type": "string"
+            }
+        ]
+    },
+    "event": [
+        {
+            "listen": "prerequest",
+            "script": {
+                "id": "9f743f65-0933-453b-a4bb-c55a23268dd7",
+                "type": "text/javascript",
+                "exec": [
+                    ""
+                ]
+            }
+        },
+        {
+            "listen": "test",
+            "script": {
+                "id": "ad88e570-ac4d-448f-b62c-e887451e9770",
+                "type": "text/javascript",
+                "exec": [
+                    ""
+                ]
+            }
+        }
+    ],
+    "variable": [
+        {
+            "id": "4096d890-da7c-4b3a-afbb-da1a4fa008ff",
+            "key": "baseUrl",
+            "value": "localhost:3000",
+            "type": "any"
+        },
+        {
+            "id": "ffa1191a-65d9-4456-af77-43710678d4b7",
+            "key": "secret",
+            "value": "<placeholder>",
+            "type": "any"
+        }
+    ]
+}
