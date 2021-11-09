@@ -1,6 +1,6 @@
 openapi: 3.0.0
 info:
-  version: '2.1.244444'
+  version: '2.1.2444'
   title: 'Bank Users'
 servers:
   - url: 'localhost:3000'
