@@ -18,9 +18,6 @@
                                 "id": "3aa4cdab-0ef8-4b6c-b1dd-940291f1e815",
                                 "exec": [
                                     "\r",
-                                    "pm.test(\"Status code is 200\", function () {\r",
-                                    "    pm.response.to.have.status(200);\r",
-                                    "});\r",
                                     "pm.test(\"Response time is less than 200ms\", function () {\r",
                                     "    pm.expect(pm.response.responseTime).to.be.below(200);\r",
                                     "});\r",
@@ -42,7 +39,7 @@
                         "method": "GET",
                         "header": [],
                         "url": {
-                            "raw": "https://postman-echo.com/get?foo1=Paidy&foo2=bar3",
+                            "raw": "https://postman-echo.com/get?foo1=AccountID&foo2=bar3",
                             "protocol": "https",
                             "host": [
                                 "postman-echo",
@@ -54,7 +51,7 @@
                             "query": [
                                 {
                                     "key": "foo1",
-                                    "value": "Paidy",
+                                    "value": "AccountID",
                                     "description": " "
                                 },
                                 {
