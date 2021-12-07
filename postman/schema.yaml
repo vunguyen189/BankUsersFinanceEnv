@@ -1,7 +1,7 @@
 openapi: 3.0.0
 info:
   version: '2.1.2444'
-  title: 'Bank Users  v2 <companyName> '
+  title: 'Bank Users  v2 Fairway'
 servers:
   - url: 'localhost:3000'
 paths:
