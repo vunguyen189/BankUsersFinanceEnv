@@ -1,7 +1,7 @@
 openapi: 3.0.0
 info:
   version: '2.1.2444'
-  title: 'Bank Users  v2 veeva v1 Sandbox'
+  title: 'Bank Users  v2 veeva vault v2 Sandbox'
 servers:
   - url: 'localhost:3000'
 paths:
