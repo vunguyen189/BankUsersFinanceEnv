@@ -1,0 +1,156 @@
+{
+  "info": {
+    "_postman_id": "44e3a348-7e99-4b34-98e5-d01d8f7599c2",
+    "name": "Bank Users 2.1",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Sample endpoint: Returns details about a particular user",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "47a39eb3-a15a-4ebc-b693-d2b5d349f379",
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});\r",
+              "pm.test(\"Status code is 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});\r",
+              "pm.test(\"Status code is 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});\r",
+              "pm.test(\"Status code is 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});\r",
+              "pm.test(\"Status code is 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});\r",
+              "pm.test(\"Response time is less than 200ms\", function () {\r",
+              "    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+              "});\r",
+              "pm.test(\"Response time is less than 200ms\", function () {\r",
+              "    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+              "});\r",
+              "pm.test(\"Response time is less than 200ms\", function () {\r",
+              "    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "id": "978b7d58-0e74-4b35-8623-8f473dbc204d",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/user?id=-2148672",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "user"
+          ],
+          "query": [
+            {
+              "key": "id",
+              "value": "-2148672",
+              "description": "(Required) ID of the user"
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "id": "bd0566ff-e3d0-4486-ba4c-9c83b7094a91",
+          "name": "Sample response: Details about a user by ID",
+          "originalRequest": {
+            "method": "GET",
+            "header": [
+              {
+                "description": "Added as a part of security scheme: basic",
+                "key": "Authorization",
+                "value": "Basic <credentials>"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/user?id=-2148672",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "user"
+              ],
+              "query": [
+                {
+                  "key": "id",
+                  "value": "-2148672"
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "disabled": false,
+              "description": "A link to the next page of responses",
+              "key": "x-next",
+              "value": "dolore deserunt tempor dolor"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "cookie": [],
+          "responseTime": null,
+          "body": "{\n \"id\": {{$randomBankAccount}},\n \"name\": \"occaeca\",\n \"tag\": \"ea veniam qui culpa\"\n}"
+        }
+      ]
+    }
+  ],
+  "auth": {
+    "type": "basic",
+    "basic": {
+      "username": "<Basic Auth Username>",
+      "password": "<Basic Auth Password>"
+    }
+  },
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "id": "06d52964-1e6f-407d-a771-e8df02290317",
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "id": "1b986fa3-0321-44b9-8b2a-b3df79a7a8f0",
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "id": "5bc75c57-1c28-4b99-8cda-03e108951109",
+      "key": "baseUrl",
+      "value": "https://5002f510-b1ec-46ad-b4b8-36a08cf59c90.mock.pstmn.io"
+    }
+  ]
+}
