@@ -112,48 +112,7 @@
                     ],
                     "cookie": [],
                     "responseTime": null,
-                    "body": "{\n \"id\": -26496496,\n \"name\": \"occaeca\",\n \"tag\": \"ea veniam qui culpa\"\n}"
-                },
-                {
-                    "id": "14c74ba9-6e19-431c-81ba-540386a33a75",
-                    "name": "Unexpected error",
-                    "originalRequest": {
-                        "method": "GET",
-                        "header": [
-                            {
-                                "description": "Added as a part of security scheme: basic",
-                                "key": "Authorization",
-                                "value": "Basic <credentials>"
-                            }
-                        ],
-                        "url": {
-                            "raw": "{{baseUrl}}/user?id=-2148672",
-                            "host": [
-                                "{{baseUrl}}"
-                            ],
-                            "path": [
-                                "user"
-                            ],
-                            "query": [
-                                {
-                                    "key": "id",
-                                    "value": "-2148672"
-                                }
-                            ]
-                        }
-                    },
-                    "status": "Internal Server Error",
-                    "code": 500,
-                    "_postman_previewlanguage": "json",
-                    "header": [
-                        {
-                            "key": "Content-Type",
-                            "value": "application/json"
-                        }
-                    ],
-                    "cookie": [],
-                    "responseTime": null,
-                    "body": "{\n \"code\": -82980532,\n \"message\": \"magna ea ut in\"\n}"
+                    "body": "{\n \"id\": {{$randomBankAccount}},\n \"name\": \"{{$randomCity}}\",\n \"tag\": \"ea veniam qui culpaFB\"\n}"
                 }
             ]
         }
@@ -197,7 +156,7 @@
     ],
     "variable": [
         {
-            "id": "9cb963bd-fcb3-483a-a3bb-7219e5f4d17a",
+            "id": "af62ab44-da3f-448f-8487-76f055e7edcb",
             "key": "baseUrl",
             "value": "https://5002f510-b1ec-46ad-b4b8-36a08cf59c90.mock.pstmn.io"
         }
