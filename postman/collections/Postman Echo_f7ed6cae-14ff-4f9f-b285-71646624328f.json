@@ -11,6 +11,20 @@
             "item": [
                 {
                     "name": "GET Request",
+                    "event": [
+                        {
+                            "listen": "test",
+                            "script": {
+                                "id": "45ceffde-c9e4-48dd-b26a-50bf952ef1e7",
+                                "exec": [
+                                    "pm.test(\"Status code is 200\", function () {\r",
+                                    "    pm.response.to.have.status(200);\r",
+                                    "});"
+                                ],
+                                "type": "text/javascript"
+                            }
+                        }
+                    ],
                     "id": "34dee59d-752b-4280-ba91-f9aeab68726a",
                     "protocolProfileBehavior": {
                         "disableBodyPruning": true
@@ -19,7 +33,7 @@
                         "method": "GET",
                         "header": [],
                         "url": {
-                            "raw": "https://postman-echo.com/get?foo1=bar1&Company=Mouser",
+                            "raw": "https://postman-echo.com/get?foo1=bar1&Company=Trimble111111",
                             "protocol": "https",
                             "host": [
                                 "postman-echo",
@@ -36,7 +50,7 @@
                                 },
                                 {
                                     "key": "Company",
-                                    "value": "Mouser"
+                                    "value": "Trimble111111"
                                 }
                             ]
                         },
@@ -436,123 +450,6 @@
                         "description": "<p>This endpoint causes the server to send custom set of response headers. Providing header values as part of the URL parameters of a <code>GET</code> request to this endpoint returns the same as part of response header.</p>\n<p>To send your own set of headers, simply add or replace the the URL parameters with your own set.</p>"
                     },
                     "response": []
-                },
-                {
-                    "name": "Sample endpoint: Returns details about a particular user",
-                    "id": "d7d93003-aac7-4d69-b3f1-0cb682da71d2",
-                    "request": {
-                        "method": "GET",
-                        "header": [],
-                        "url": {
-                            "raw": "{{baseUrl}}/user?id=-8531429",
-                            "host": [
-                                "{{baseUrl}}"
-                            ],
-                            "path": [
-                                "user"
-                            ],
-                            "query": [
-                                {
-                                    "description": "(Required) ID of the user",
-                                    "key": "id",
-                                    "value": "-8531429"
-                                }
-                            ]
-                        }
-                    },
-                    "response": [
-                        {
-                            "id": "3f6d5a61-7a90-4c4c-8a86-deda46bff3f7",
-                            "name": "Sample response: Details about a user by ID",
-                            "originalRequest": {
-                                "method": "GET",
-                                "header": [
-                                    {
-                                        "description": "Added as a part of security scheme: basic",
-                                        "key": "Authorization",
-                                        "value": "Basic <credentials>"
-                                    }
-                                ],
-                                "url": {
-                                    "raw": "{{baseUrl}}/user?id=-18078567",
-                                    "host": [
-                                        "{{baseUrl}}"
-                                    ],
-                                    "path": [
-                                        "user"
-                                    ],
-                                    "query": [
-                                        {
-                                            "key": "id",
-                                            "value": "-18078567"
-                                        }
-                                    ]
-                                }
-                            },
-                            "status": "OK",
-                            "code": 200,
-                            "_postman_previewlanguage": "Text",
-                            "header": [
-                                {
-                                    "disabled": false,
-                                    "description": {
-                                        "content": "A link to the next page of responses",
-                                        "type": "text/plain"
-                                    },
-                                    "key": "x-next",
-                                    "value": "velit veniam fugiat Excepteur"
-                                },
-                                {
-                                    "key": "Content-Type",
-                                    "value": "application/json"
-                                }
-                            ],
-                            "cookie": [],
-                            "responseTime": null,
-                            "body": "{\n \"id\": -16778176,\n \"name\": \"in ul\",\n \"tag\": \"Ut dolore ullamco sint\"\n}"
-                        },
-                        {
-                            "id": "99fb1abe-f68a-4803-accc-db735ae2ad76",
-                            "name": "Unexpected error",
-                            "originalRequest": {
-                                "method": "GET",
-                                "header": [
-                                    {
-                                        "description": "Added as a part of security scheme: basic",
-                                        "key": "Authorization",
-                                        "value": "Basic <credentials>"
-                                    }
-                                ],
-                                "url": {
-                                    "raw": "{{baseUrl}}/user?id=-18078567",
-                                    "host": [
-                                        "{{baseUrl}}"
-                                    ],
-                                    "path": [
-                                        "user"
-                                    ],
-                                    "query": [
-                                        {
-                                            "key": "id",
-                                            "value": "-18078567"
-                                        }
-                                    ]
-                                }
-                            },
-                            "status": "Internal Server Error",
-                            "code": 500,
-                            "_postman_previewlanguage": "Text",
-                            "header": [
-                                {
-                                    "key": "Content-Type",
-                                    "value": "application/json"
-                                }
-                            ],
-                            "cookie": [],
-                            "responseTime": null,
-                            "body": "{\n \"code\": -76871842,\n \"message\": \"anim consequat sunt sed consectetur\"\n}"
-                        }
-                    ]
                 }
             ],
             "id": "e95012c4-13e1-4a17-b4c0-ff1c4527d0fb",
