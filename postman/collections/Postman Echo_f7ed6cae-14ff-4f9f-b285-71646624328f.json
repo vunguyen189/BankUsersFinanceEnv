@@ -2,7 +2,7 @@
     "info": {
         "_postman_id": "e58ab08a-8f50-432e-b570-a29e9374d1d7",
         "name": "Postman Echo",
-        "description": "Postman Echo is service you can use to test your REST clients and make sample API calls. It provides endpoints for GET, POST, PUT, various auth mechanisms and other utility endpoints.\n\nThe documentation for the endpoints as well as example responses can be found at https://postman-echo.com",
+        "description": "![](https://i.imgur.com/ymcwlzB.gif)\n\nPostman Echo is service you can use to test your REST clients and make sample API calls. It provides endpoints for GET, POST, PUT, various auth mechanisms and other utility endpoints.\n\nThe documentation for the endpoints as well as example responses can be found at [https://postman-echo.com](https://postman-echo.com)",
         "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
     },
     "item": [
@@ -33,7 +33,7 @@
                         "method": "GET",
                         "header": [],
                         "url": {
-                            "raw": "https://postman-echo.com/get?foo1=bar1&Company=Trimble111111",
+                            "raw": "https://postman-echo.com/get?foo1=bar1&Company=<name>",
                             "protocol": "https",
                             "host": [
                                 "postman-echo",
@@ -50,7 +50,7 @@
                                 },
                                 {
                                     "key": "Company",
-                                    "value": "Trimble111111"
+                                    "value": "<name>"
                                 }
                             ]
                         },
