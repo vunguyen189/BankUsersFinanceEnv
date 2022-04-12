@@ -17,9 +17,25 @@
                             "script": {
                                 "id": "45ceffde-c9e4-48dd-b26a-50bf952ef1e7",
                                 "exec": [
+                                    "\r",
+                                    "pm.test(\"Response time is less than 200ms\", function () {\r",
+                                    "    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+                                    "});\r",
                                     "pm.test(\"Status code is 200\", function () {\r",
                                     "    pm.response.to.have.status(200);\r",
-                                    "});"
+                                    ""
+                                ],
+                                "type": "text/javascript"
+                            }
+                        },
+                        {
+                            "listen": "prerequest",
+                            "script": {
+                                "id": "72e14f0f-7195-4dd0-a46b-1728979b92d7",
+                                "exec": [
+                                    "pm.collectionVariables.unset(\"variable_key\");\r",
+                                    "pm.collectionVariables.set(\"variable_key\", \"variable_value\");\r",
+                                    "pm.collectionVariables.unset(\"variable_key\");"
                                 ],
                                 "type": "text/javascript"
                             }
@@ -33,7 +49,7 @@
                         "method": "GET",
                         "header": [],
                         "url": {
-                            "raw": "https://postman-echo.com/get?foo1=bar1&Company=<name>",
+                            "raw": "https://postman-echo.com/get?foo1=bar1&Company=Trimble",
                             "protocol": "https",
                             "host": [
                                 "postman-echo",
@@ -50,7 +66,7 @@
                                 },
                                 {
                                     "key": "Company",
-                                    "value": "<name>"
+                                    "value": "Trimble"
                                 }
                             ]
                         },
@@ -129,6 +145,72 @@
                             "cookie": [],
                             "responseTime": null,
                             "body": "{\n    \"args\": {\n        \"foo1\": \"bar\",\n        \"foo2\": \"bar2\"\n    },\n    \"headers\": {\n        \"x-forwarded-proto\": \"https\",\n        \"host\": \"postman-echo.com\",\n        \"accept\": \"*/*\",\n        \"accept-encoding\": \"gzip, deflate\",\n        \"cache-control\": \"no-cache\",\n        \"cookie\": \"sails.sid=s%3ASF4FLaRniSy3MriH4rK1Y1FUuhJ89c2E.pSGFzR%2BH1RhijyvLb7Qbsk33VPbBssAN8hxiH9EDZiQ\",\n        \"postman-token\": \"6d616ebc-b08e-47d1-93fb-485ec44cfd86\",\n        \"user-agent\": \"PostmanRuntime/7.16.3\",\n        \"x-forwarded-port\": \"443\"\n    },\n    \"url\": \"https://postman-echo.com/get?foo1=bar&foo2=bar2\"\n}"
+                        },
+                        {
+                            "id": "e66f03e7-8d4e-4f7a-a367-3f3fa1a8b747",
+                            "name": "GET Request CBIC",
+                            "originalRequest": {
+                                "method": "GET",
+                                "header": [],
+                                "url": {
+                                    "raw": "https://postman-echo.com/get?foo1=bar1&Company=CIBC",
+                                    "protocol": "https",
+                                    "host": [
+                                        "postman-echo",
+                                        "com"
+                                    ],
+                                    "path": [
+                                        "get"
+                                    ],
+                                    "query": [
+                                        {
+                                            "key": "foo1",
+                                            "value": "bar1",
+                                            "description": " "
+                                        },
+                                        {
+                                            "key": "Company",
+                                            "value": "CIBC"
+                                        }
+                                    ]
+                                }
+                            },
+                            "status": "OK",
+                            "code": 500,
+                            "_postman_previewlanguage": "json",
+                            "header": [
+                                {
+                                    "key": "Date",
+                                    "value": "Mon, 28 Mar 2022 21:09:04 GMT"
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json; charset=utf-8"
+                                },
+                                {
+                                    "key": "Content-Length",
+                                    "value": "529"
+                                },
+                                {
+                                    "key": "Connection",
+                                    "value": "keep-alive"
+                                },
+                                {
+                                    "key": "ETag",
+                                    "value": "W/\"211-1kKh+CgAnu/X9PfP9d7mgB4nqY0\""
+                                },
+                                {
+                                    "key": "Vary",
+                                    "value": "Accept-Encoding"
+                                },
+                                {
+                                    "key": "set-cookie",
+                                    "value": "sails.sid=s%3AmkG1iby4WJmWN5BByNGnzhoLwOWXXJEK.Tr6ThnDWnkJx0Y5scybj6wNT%2BX600etqMJm69I0je78; Path=/; HttpOnly"
+                                }
+                            ],
+                            "cookie": [],
+                            "responseTime": null,
+                            "body": "{\n    \"args\": {\n        \"foo1\": \"bar1\",\n        \"Company\": \"CIBC\"\n    },\n    \"headers\": {\n        \"x-forwarded-proto\": \"https\",\n        \"x-forwarded-port\": \"443\",\n        \"host\": \"postman-echo.com\",\n        \"x-amzn-trace-id\": \"Root=1-624223f0-07f056543351a1fa1977c24b\",\n        \"user-agent\": \"PostmanRuntime/7.29.0\",\n        \"accept\": \"*/*\",\n        \"cache-control\": \"no-cache\",\n        \"postman-token\": \"5b802411-1172-49ca-8c5d-b73a70515ab2\",\n        \"accept-encoding\": \"gzip, deflate, br\",\n        \"cookie\": \"sails.sid=s%3AshtwCOaVlS20Y3LAJt_tnVZM2XmDy_9h.aHhtLxN67y5jWCJXoMLsM2ID7%2BUq85o6YxmgIyTFs0A\"\n    },\n    \"url\": \"https://postman-echo.com/get?foo1=bar1&Company=CIBC\"\n}"
                         }
                     ]
                 },
@@ -545,7 +627,7 @@
     ],
     "variable": [
         {
-            "id": "5cb599cb-dc5d-4a8d-8368-6f7fec7e1db2",
+            "id": "fae85735-d51d-45b9-8fa6-7a2ec9032a3f",
             "key": "baseUrl",
             "value": "localhost:3000",
             "type": "string"
