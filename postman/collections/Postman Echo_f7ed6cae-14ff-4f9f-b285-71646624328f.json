@@ -20,13 +20,15 @@
 									"pm.test(\"Status code is 200\", function () {\r",
 									"    pm.response.to.have.status(200);\r",
 									"});\r",
-									"pm.test(\"Response time is less than 200ms\", function () {\r",
-									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"pm.test(\"Successful POST request\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+									"});\r",
+									"pm.test(\"Status code name has string\", function () {\r",
+									"    pm.response.to.have.status(\"Created\");\r",
 									"});\r",
 									"\r",
-									"pm.test(\"Status code is 200\", function () {\r",
-									"    pm.response.to.have.status(200);\r",
-									"});"
+									"\r",
+									""
 								],
 								"type": "text/javascript"
 							}
@@ -38,7 +40,11 @@
 								"exec": [
 									"pm.collectionVariables.unset(\"variable_key\");\r",
 									"pm.collectionVariables.set(\"variable_key\", \"variable_value\");\r",
-									""
+									"\r",
+									"pm.collectionVariables.unset(\"variable_key\");\r",
+									"pm.environment.unset(\"variable_key\");\r",
+									"pm.collectionVariables.unset(\"variable_key\");\r",
+									"pm.environment.unset(\"variable_key\");"
 								],
 								"type": "text/javascript"
 							}
@@ -52,7 +58,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://postman-echo.com/get?foo1=FCIB",
+							"raw": "https://postman-echo.com/get?foo1=WB2",
 							"protocol": "https",
 							"host": [
 								"postman-echo",
@@ -64,7 +70,7 @@
 							"query": [
 								{
 									"key": "foo1",
-									"value": "FCIB",
+									"value": "WB2",
 									"description": " "
 								},
 								{
@@ -282,6 +288,73 @@
 							"cookie": [],
 							"responseTime": null,
 							"body": "{\n    \"args\": {\n        \"foo1\": \"FCIB\"\n    },\n    \"headers\": {\n        \"x-forwarded-proto\": \"https\",\n        \"x-forwarded-port\": \"443\",\n        \"host\": \"postman-echo.com\",\n        \"x-amzn-trace-id\": \"Root=1-62696125-6c1061860d4d219c4488ec5d\",\n        \"user-agent\": \"PostmanRuntime/7.29.0\",\n        \"accept\": \"*/*\",\n        \"cache-control\": \"no-cache\",\n        \"postman-token\": \"94daef66-f2c5-48a1-a26f-ea33741ba2a5\",\n        \"accept-encoding\": \"gzip, deflate, br\"\n    },\n    \"url\": \"https://postman-echo.com/get?foo1=FCIB\"\n}"
+						},
+						{
+							"id": "301f59f7-9d5d-4da9-9428-4dd0167e21bc",
+							"name": "Trimble2",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://postman-echo.com/get?foo1=Trimble2",
+									"protocol": "https",
+									"host": [
+										"postman-echo",
+										"com"
+									],
+									"path": [
+										"get"
+									],
+									"query": [
+										{
+											"key": "foo1",
+											"value": "Trimble2",
+											"description": " "
+										},
+										{
+											"key": "Company",
+											"value": "Trimble",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 27 Apr 2022 17:31:32 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "513"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"201-pkCyj+5GmZBC/v1x4Aw19LPyOtk\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "set-cookie",
+									"value": "sails.sid=s%3AYYfvDf0p2DFdlqlTLplqzhoO8QOLUXeq.%2BDnI78%2FAytKT4diUCexD66gavMArrF0MW6sknph6xuI; Path=/; HttpOnly"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"args\": {\n        \"foo1\": \"Trimble2UPDATE\"\n    },\n    \"headers\": {\n        \"x-forwarded-proto\": \"https\",\n        \"x-forwarded-port\": \"443\",\n        \"host\": \"postman-echo.com\",\n        \"x-amzn-trace-id\": \"Root=1-62697df4-7edcc9447dc6677b3f128d1d\",\n        \"user-agent\": \"PostmanRuntime/7.29.0\",\n        \"accept\": \"*/*\",\n        \"cache-control\": \"no-cache\",\n        \"postman-token\": \"0ee99895-b545-44dc-844f-eda45d3e434c\",\n        \"accept-encoding\": \"gzip, deflate, br\",\n        \"cookie\": \"sails.sid=s%3AWxHGx9W5pxsZK_nkR94ahm-pbeaIz2Xd.39vXkfv6xah%2BemfQ2ZK%2BofQ3%2B3LtLgD%2BbPI3oUQmJN0\"\n    },\n    \"url\": \"https://postman-echo.com/get?foo1=Trimble2\"\n}"
 						}
 					]
 				},
@@ -698,15 +771,10 @@
 	],
 	"variable": [
 		{
-			"id": "07d4027f-6e59-475c-9250-72a3d7438206",
+			"id": "70474ccd-dabb-4016-bc50-92edbe6bf036",
 			"key": "baseUrl",
 			"value": "localhost:3000",
 			"type": "string"
-		},
-		{
-			"id": "d4a571f5-6d21-4cf4-b729-93173290d941",
-			"key": "variable_key",
-			"value": ""
 		}
 	]
 }
