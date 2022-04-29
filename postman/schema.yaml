@@ -1,7 +1,7 @@
 openapi: 3.0.0
 info:
   version: '2.1.2444'
-  title: 'Bank Users Hello Whitbread'
+  title: 'Bank Users Goodbye Whitbread have a good 3 day weekend'
   description: 'this is where the descriptions is to test'
 servers:
   - url: 'localhost:3000'
