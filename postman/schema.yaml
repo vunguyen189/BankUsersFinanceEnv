@@ -1,7 +1,7 @@
 openapi: 3.0.0
 info:
   version: '2.1.2444'
-  title: 'Bank Users Goodbye  have a good 3 day weekend remove name demo'
+  title: 'Bank Users Goodbye  have a good 3 day weekend remove name demo hello Bakkt'
   description: 'this is where the descriptions is to hello'
 servers:
   - url: 'localhost:3000'

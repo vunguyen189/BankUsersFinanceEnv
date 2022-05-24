@@ -18,19 +18,17 @@
 								"id": "45ceffde-c9e4-48dd-b26a-50bf952ef1e7",
 								"exec": [
 									"\r",
+									"\r",
 									"pm.test(\"Status code is 200\", function () {\r",
 									"    pm.response.to.have.status(200);\r",
 									"});\r",
 									"pm.test(\"Status code is 200\", function () {\r",
 									"    pm.response.to.have.status(200);\r",
 									"});\r",
+									"\r",
 									"pm.test(\"Status code is 200\", function () {\r",
 									"    pm.response.to.have.status(200);\r",
-									"});\r",
-									"pm.test(\"Response time is less than 200ms\", function () {\r",
-									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
-									"});\r",
-									""
+									"});"
 								],
 								"type": "text/javascript"
 							}
@@ -58,7 +56,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://postman-echo.com/get?foo1={{name}}&Company={{email}}",
+							"raw": "https://postman-echo.com/get?Company=Bakkt",
 							"protocol": "https",
 							"host": [
 								"postman-echo",
@@ -71,11 +69,12 @@
 								{
 									"key": "foo1",
 									"value": "{{name}}",
-									"description": " "
+									"description": " ",
+									"disabled": true
 								},
 								{
 									"key": "Company",
-									"value": "{{email}}"
+									"value": "Bakkt"
 								}
 							]
 						},
@@ -912,7 +911,7 @@
 	],
 	"variable": [
 		{
-			"id": "cb138753-ef7a-4473-a741-e9ec516e3b8b",
+			"id": "0285ccc4-cb51-475e-98b3-09f5c78fc076",
 			"key": "baseUrl",
 			"value": "localhost:3000",
 			"type": "string"
