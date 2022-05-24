@@ -17,17 +17,19 @@
 							"script": {
 								"id": "45ceffde-c9e4-48dd-b26a-50bf952ef1e7",
 								"exec": [
+									"\r",
 									"pm.test(\"Status code is 200\", function () {\r",
 									"    pm.response.to.have.status(200);\r",
 									"});\r",
-									"pm.test(\"Successful POST request\", function () {\r",
-									"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
 									"});\r",
-									"pm.test(\"Status code name has string\", function () {\r",
-									"    pm.response.to.have.status(\"Created\");\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
 									"});\r",
-									"\r",
-									"\r",
+									"pm.test(\"Response time is less than 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});\r",
 									""
 								],
 								"type": "text/javascript"
@@ -41,8 +43,6 @@
 									"pm.collectionVariables.unset(\"variable_key\");\r",
 									"pm.collectionVariables.set(\"variable_key\", \"variable_value\");\r",
 									"\r",
-									"pm.collectionVariables.unset(\"variable_key\");\r",
-									"pm.environment.unset(\"variable_key\");\r",
 									"pm.collectionVariables.unset(\"variable_key\");\r",
 									"pm.environment.unset(\"variable_key\");"
 								],
@@ -58,7 +58,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://postman-echo.com/get?foo1=WB2",
+							"raw": "https://postman-echo.com/get?foo1={{name}}&Company={{email}}",
 							"protocol": "https",
 							"host": [
 								"postman-echo",
@@ -70,13 +70,12 @@
 							"query": [
 								{
 									"key": "foo1",
-									"value": "WB2",
+									"value": "{{name}}",
 									"description": " "
 								},
 								{
 									"key": "Company",
-									"value": "Trimble",
-									"disabled": true
+									"value": "{{email}}"
 								}
 							]
 						},
@@ -355,6 +354,148 @@
 							"cookie": [],
 							"responseTime": null,
 							"body": "{\n    \"args\": {\n        \"foo1\": \"Trimble2UPDATE\"\n    },\n    \"headers\": {\n        \"x-forwarded-proto\": \"https\",\n        \"x-forwarded-port\": \"443\",\n        \"host\": \"postman-echo.com\",\n        \"x-amzn-trace-id\": \"Root=1-62697df4-7edcc9447dc6677b3f128d1d\",\n        \"user-agent\": \"PostmanRuntime/7.29.0\",\n        \"accept\": \"*/*\",\n        \"cache-control\": \"no-cache\",\n        \"postman-token\": \"0ee99895-b545-44dc-844f-eda45d3e434c\",\n        \"accept-encoding\": \"gzip, deflate, br\",\n        \"cookie\": \"sails.sid=s%3AWxHGx9W5pxsZK_nkR94ahm-pbeaIz2Xd.39vXkfv6xah%2BemfQ2ZK%2BofQ3%2B3LtLgD%2BbPI3oUQmJN0\"\n    },\n    \"url\": \"https://postman-echo.com/get?foo1=Trimble2\"\n}"
+						},
+						{
+							"id": "be6e7aef-3201-4be2-ab1f-7547000def57",
+							"name": "GET Request Microsoft",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://postman-echo.com/get?foo1=Microsoft",
+									"protocol": "https",
+									"host": [
+										"postman-echo",
+										"com"
+									],
+									"path": [
+										"get"
+									],
+									"query": [
+										{
+											"key": "foo1",
+											"value": "Microsoft",
+											"description": " "
+										},
+										{
+											"key": "Company",
+											"value": "Trimble",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 11 May 2022 16:16:25 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "511"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1ff-+FdzaLM3vMG6RlDYbvI5sbHVnjE\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "set-cookie",
+									"value": "sails.sid=s%3Alt-lKv3gr6iePwbTDhubZU11EjtSGwPb.HK%2FX5oW5tXCkOcExsyEwujgwGH%2Be0ijJdmrsAktmMmU; Path=/; HttpOnly"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"args\": {\n        \"foo1\": \"Microsoft new edit\"\n    },\n    \"headers\": {\n        \"x-forwarded-proto\": \"https\",\n        \"x-forwarded-port\": \"443\",\n        \"host\": \"postman-echo.com\",\n        \"x-amzn-trace-id\": \"Root=1-627be159-175b451266326a017413061a\",\n        \"user-agent\": \"PostmanRuntime/7.29.0\",\n        \"accept\": \"*/*\",\n        \"cache-control\": \"no-cache\",\n        \"postman-token\": \"b478bfa2-9ec9-4c57-97a1-a48d558caf70\",\n        \"accept-encoding\": \"gzip, deflate, br\",\n        \"cookie\": \"sails.sid=s%3AK6ceYnZYjjfF2mNX8f9zxuGbbkoVA08J.rz8f%2F7nE%2B788dmyymnnWYo7UAkF33866CoypXIBNKW8\"\n    },\n    \"url\": \"https://postman-echo.com/get?foo1=Microsoft\"\n}"
+						},
+						{
+							"id": "b524bd34-1008-48f1-afd0-5e83e55fdf7d",
+							"name": "MSFT",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://postman-echo.com/get?foo1=Microsoft&FakerJS={{$randomFirstName}}&lorem={{$randomLoremLines}}",
+									"protocol": "https",
+									"host": [
+										"postman-echo",
+										"com"
+									],
+									"path": [
+										"get"
+									],
+									"query": [
+										{
+											"key": "foo1",
+											"value": "Microsoft",
+											"description": " "
+										},
+										{
+											"key": "FakerJS",
+											"value": "{{$randomFirstName}}"
+										},
+										{
+											"key": "lorem",
+											"value": "{{$randomLoremLines}}",
+											"type": "text"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 19 May 2022 19:44:10 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"410-cP3oHugIdVK7DIl8oCezgAJokzY\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "set-cookie",
+									"value": "sails.sid=s%3AaWYUiH-ei27VUmdX3MEweqelsXyXNBxO.rwFd26hw5QfwTLU%2F4Mi5X5tybDQ6nEqZjn084zfwFHs; Path=/; HttpOnly"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"args\": {\n        \"foo1\": \"Microsoft\",\n        \"FakerJS\": \"Wilfredo\",\n        \"lorem\": \"Sint commodi autem molestiae in voluptatibus ex.\\nEius nisi reiciendis velit quisquam magnam eum fuga.\\nVoluptas dolor dolorem voluptatibus sed velit sequi voluptas.\\nPossimus asperiores cupiditate consectetur.\"\n    },\n    \"headers\": {\n        \"x-forwarded-proto\": \"https\",\n        \"x-forwarded-port\": \"443\",\n        \"host\": \"postman-echo.com\",\n        \"x-amzn-trace-id\": \"Root=1-62869e0a-6cba7d98329f418945b3cc8d\",\n        \"user-agent\": \"PostmanRuntime/7.29.0\",\n        \"accept\": \"*/*\",\n        \"cache-control\": \"no-cache\",\n        \"postman-token\": \"0d1118c0-3778-4a01-9ae1-46b5e3bae2c3\",\n        \"accept-encoding\": \"gzip, deflate, br\",\n        \"cookie\": \"sails.sid=s%3AiIUGrrwecathugW6a3Z-LGI4YKzRFEv8.B6%2Fd5h6pxKvXrIZ58plDi%2B%2BIXg7SKzPHvfO%2Bb56bmAg\"\n    },\n    \"url\": \"https://postman-echo.com/get?foo1=Microsoft&FakerJS=Wilfredo&lorem=Sint%20commodi%20autem%20molestiae%20in%20voluptatibus%20ex.%0AEius%20nisi%20reiciendis%20velit%20quisquam%20magnam%20eum%20fuga.%0AVoluptas%20dolor%20dolorem%20voluptatibus%20sed%20velit%20sequi%20voluptas.%0APossimus%20asperiores%20cupiditate%20consectetur.\"\n}"
 						}
 					]
 				},
@@ -771,7 +912,7 @@
 	],
 	"variable": [
 		{
-			"id": "70474ccd-dabb-4016-bc50-92edbe6bf036",
+			"id": "cb138753-ef7a-4473-a741-e9ec516e3b8b",
 			"key": "baseUrl",
 			"value": "localhost:3000",
 			"type": "string"
