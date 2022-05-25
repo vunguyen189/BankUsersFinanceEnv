@@ -1,8 +1,8 @@
 {
 	"info": {
-		"_postman_id": "9729100c-4ab3-4267-a2d1-d6fd7016c716",
-		"name": "Bakkt v1",
-		"description": "this is where the descriptions is to hello",
+		"_postman_id": "74562396-d79b-46ab-854d-cb7f6f7ab5fd",
+		"name": "CIBC Collection",
+		"description": "this is where the descriptions is to hello CIBC",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -11,7 +11,7 @@
 			"item": [
 				{
 					"name": "Sample endpoint: Returns details about a particular user",
-					"id": "80d8f5da-a2e7-478a-9010-728f317fb0c1",
+					"id": "14a00be3-eb3f-44d5-9937-df29e9914a0b",
 					"request": {
 						"method": "GET",
 						"header": [
@@ -21,7 +21,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{baseUrl}}/user?id=13716248",
+							"raw": "{{baseUrl}}/user?id=-15059624",
 							"host": [
 								"{{baseUrl}}"
 							],
@@ -31,7 +31,7 @@
 							"query": [
 								{
 									"key": "id",
-									"value": "13716248",
+									"value": "-15059624",
 									"description": "(Required) ID of the user"
 								}
 							]
@@ -39,7 +39,7 @@
 					},
 					"response": [
 						{
-							"id": "ffc36052-53ec-476e-9196-e788f85a2b97",
+							"id": "35b118f4-c1bd-43e6-b8d4-70ca31e98678",
 							"name": "Sample response: Details about a user by ID",
 							"originalRequest": {
 								"method": "GET",
@@ -51,7 +51,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{baseUrl}}/user?id=13716248",
+									"raw": "{{baseUrl}}/user?id=-15059624",
 									"host": [
 										"{{baseUrl}}"
 									],
@@ -61,7 +61,7 @@
 									"query": [
 										{
 											"key": "id",
-											"value": "13716248"
+											"value": "-15059624"
 										}
 									]
 								}
@@ -74,7 +74,7 @@
 									"disabled": false,
 									"description": "A link to the next page of responses",
 									"key": "x-next",
-									"value": "ipsum cillum non ullamco"
+									"value": "aliqua dolore"
 								},
 								{
 									"key": "Content-Type",
@@ -83,10 +83,10 @@
 							],
 							"cookie": [],
 							"responseTime": null,
-							"body": "{\n  \"id\": -39523981,\n  \"name\": \"esse\",\n  \"tag\": \"sunt\"\n}"
+							"body": "{\n  \"id\": 10574491,\n  \"name\": \"cillum fugiat\",\n  \"tag\": \"laboris do\"\n}"
 						},
 						{
-							"id": "859c06f5-a84d-478b-a14f-1787211b8e0a",
+							"id": "e33d718f-33a5-4949-9dcd-80f418a4b650",
 							"name": "Unexpected error",
 							"originalRequest": {
 								"method": "GET",
@@ -98,7 +98,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{baseUrl}}/user?id=13716248",
+									"raw": "{{baseUrl}}/user?id=-15059624",
 									"host": [
 										"{{baseUrl}}"
 									],
@@ -108,7 +108,7 @@
 									"query": [
 										{
 											"key": "id",
-											"value": "13716248"
+											"value": "-15059624"
 										}
 									]
 								}
@@ -124,12 +124,12 @@
 							],
 							"cookie": [],
 							"responseTime": null,
-							"body": "{\n  \"code\": 13165197,\n  \"message\": \"dolore nulla\"\n}"
+							"body": "{\n  \"code\": 98782565,\n  \"message\": \"nostrud incididunt cupidatat et\"\n}"
 						}
 					]
 				}
 			],
-			"id": "d92680bb-71ea-4cc9-8c95-d2ff54a42dfd"
+			"id": "ed758e3c-3845-441a-9fce-2bb669609137"
 		}
 	],
 	"auth": {
@@ -149,7 +149,7 @@
 	},
 	"variable": [
 		{
-			"id": "c1d59919-4fe6-4764-afc0-42def1e93e98",
+			"id": "d77ebdb0-9cc1-4df2-bfa6-bf94b2cd6ac0",
 			"key": "baseUrl",
 			"value": "localhost:3000",
 			"type": "string"

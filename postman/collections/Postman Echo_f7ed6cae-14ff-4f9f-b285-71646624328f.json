@@ -18,16 +18,15 @@
 								"id": "45ceffde-c9e4-48dd-b26a-50bf952ef1e7",
 								"exec": [
 									"\r",
-									"\r",
-									"pm.test(\"Status code is 200\", function () {\r",
-									"    pm.response.to.have.status(200);\r",
-									"});\r",
 									"pm.test(\"Status code is 200\", function () {\r",
 									"    pm.response.to.have.status(200);\r",
 									"});\r",
 									"\r",
 									"pm.test(\"Status code is 200\", function () {\r",
 									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Response time is less than 500ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
 									"});"
 								],
 								"type": "text/javascript"
@@ -56,7 +55,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://postman-echo.com/get?Company=Bakkt",
+							"raw": "https://postman-echo.com/get?Company=CIBC",
 							"protocol": "https",
 							"host": [
 								"postman-echo",
@@ -74,7 +73,7 @@
 								},
 								{
 									"key": "Company",
-									"value": "Bakkt"
+									"value": "CIBC"
 								}
 							]
 						},
@@ -911,7 +910,7 @@
 	],
 	"variable": [
 		{
-			"id": "0285ccc4-cb51-475e-98b3-09f5c78fc076",
+			"id": "0560fefb-99cf-4cdc-9d62-23ae3cb1112e",
 			"key": "baseUrl",
 			"value": "localhost:3000",
 			"type": "string"
