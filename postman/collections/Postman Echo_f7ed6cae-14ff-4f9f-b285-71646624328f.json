@@ -18,15 +18,18 @@
 								"id": "45ceffde-c9e4-48dd-b26a-50bf952ef1e7",
 								"exec": [
 									"\r",
-									"pm.test(\"Status code is 200\", function () {\r",
-									"    pm.response.to.have.status(200);\r",
-									"});\r",
 									"\r",
 									"pm.test(\"Status code is 200\", function () {\r",
 									"    pm.response.to.have.status(200);\r",
 									"});\r",
 									"pm.test(\"Response time is less than 500ms\", function () {\r",
 									"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+									"});\r",
+									"pm.test(\"Response time is less than 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
 									"});"
 								],
 								"type": "text/javascript"
@@ -37,11 +40,13 @@
 							"script": {
 								"id": "72e14f0f-7195-4dd0-a46b-1728979b92d7",
 								"exec": [
-									"pm.collectionVariables.unset(\"variable_key\");\r",
-									"pm.collectionVariables.set(\"variable_key\", \"variable_value\");\r",
+									"\r",
 									"\r",
 									"pm.collectionVariables.unset(\"variable_key\");\r",
-									"pm.environment.unset(\"variable_key\");"
+									"pm.environment.unset(\"variable_key\");\r",
+									"pm.sendRequest(\"https://postman-echo.com/get\", function (err, response) {\r",
+									"    console.log(response.json());\r",
+									"});"
 								],
 								"type": "text/javascript"
 							}
@@ -55,7 +60,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://postman-echo.com/get?Company=CIBC",
+							"raw": "https://postman-echo.com/get?Company=Intuit",
 							"protocol": "https",
 							"host": [
 								"postman-echo",
@@ -73,7 +78,7 @@
 								},
 								{
 									"key": "Company",
-									"value": "CIBC"
+									"value": "Intuit"
 								}
 							]
 						},
@@ -846,27 +851,36 @@
 			"name": "Eval()",
 			"item": [
 				{
-					"name": "Eval Function",
+					"name": "Eval Function (Set1)",
 					"event": [
 						{
 							"listen": "prerequest",
 							"script": {
 								"id": "389c4a5c-2ccf-4cdb-8e34-606af1d46514",
 								"exec": [
+									"//declaring commonTests as a variable with the 5 test assertions\r",
 									"var commonTests = () => {\r",
 									"\r",
 									"    pm.test(\"Status code is 200\", function () {\r",
 									"      pm.response.to.have.status(200);\r",
 									"    });\r",
-									"    pm.test(\"Response time is less than 200ms\", function () {\r",
-									"        pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"    pm.test(\"Response time is less than 500ms\", function () {\r",
+									"        pm.expect(pm.response.responseTime).to.be.below(500);\r",
 									"    });\r",
 									"    pm.test(\"Content-Type is present\", function () {\r",
 									"        pm.response.to.have.header(\"Content-Type\");\r",
 									"    });\r",
+									"        pm.test(\"Status code is 200\", function () {\r",
+									"      pm.response.to.have.status(200);\r",
+									"    });\r",
+									"\r",
 									"}\r",
 									"\r",
-									"pm.environment.set(\"commonTests\", commonTests.toString());"
+									"//sets var into Environment\r",
+									"pm.globals.set(\"commonTests\", commonTests.toString());\r",
+									"\r",
+									"//to run in Newman,use as Environment variable instead of Global\r",
+									"//pm.environment.set(\"commonTests\", commonTests.toString());"
 								],
 								"type": "text/javascript"
 							}
@@ -876,7 +890,7 @@
 							"script": {
 								"id": "5307666e-e034-437e-b1c0-a3248cf8b19e",
 								"exec": [
-									"eval(pm.environment.get(\"commonTests\"))();\r",
+									"eval(pm.globals.get(\"commonTests\"))();\r",
 									""
 								],
 								"type": "text/javascript"
@@ -903,6 +917,52 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Eval Function (Show2)",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "389c4a5c-2ccf-4cdb-8e34-606af1d46514",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "5307666e-e034-437e-b1c0-a3248cf8b19e",
+								"exec": [
+									"eval(pm.globals.get(\"commonTests\"))();\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "29b7884d-b4d7-41c1-9e5f-a7812543ca0e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://postman-echo.com/get",
+							"protocol": "https",
+							"host": [
+								"postman-echo",
+								"com"
+							],
+							"path": [
+								"get"
+							]
+						}
+					},
+					"response": []
 				}
 			],
 			"id": "59f834e9-452b-4d73-88e6-8e88be4565f1"
@@ -910,7 +970,7 @@
 	],
 	"variable": [
 		{
-			"id": "cb3102e2-1497-48f3-a112-5930866ef256",
+			"id": "4d185771-3d89-44f5-975e-017a15d7dee7",
 			"key": "baseUrl",
 			"value": "localhost:3000",
 			"type": "string"
