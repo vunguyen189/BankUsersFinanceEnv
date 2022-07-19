@@ -2,7 +2,7 @@ openapi: 3.0.0
 info:
   version: '2.1.2444'
   title: 'Bank Users Goodbye  GitHub GOODBYE'
-  description: 'this is where the descriptions is to 719719 hello Will Bryan Isaac 9999999999999999999999'
+  description: 'this is where the descriptions is to 719719 hello Will Bryan Isaac 999999999999999999999911111111111111111111'
 servers:
   - url: 'localhost:3000'
 paths:
