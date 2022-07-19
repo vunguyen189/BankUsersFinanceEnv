@@ -18,7 +18,6 @@
 								"id": "45ceffde-c9e4-48dd-b26a-50bf952ef1e7",
 								"exec": [
 									"\r",
-									"\r",
 									"pm.test(\"Status code is 200\", function () {\r",
 									"    pm.response.to.have.status(200);\r",
 									"});\r",
@@ -28,9 +27,7 @@
 									"pm.test(\"Response time is less than 200ms\", function () {\r",
 									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
 									"});\r",
-									"pm.test(\"Status code is 200\", function () {\r",
-									"    pm.response.to.have.status(200);\r",
-									"});"
+									""
 								],
 								"type": "text/javascript"
 							}
@@ -46,7 +43,8 @@
 									"pm.environment.unset(\"variable_key\");\r",
 									"pm.sendRequest(\"https://postman-echo.com/get\", function (err, response) {\r",
 									"    console.log(response.json());\r",
-									"});"
+									"});\r",
+									"pm.variables.get(\"variable_key\");"
 								],
 								"type": "text/javascript"
 							}
@@ -60,7 +58,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://postman-echo.com/get?Company=Intuit",
+							"raw": "https://postman-echo.com/get?Company=CE",
 							"protocol": "https",
 							"host": [
 								"postman-echo",
@@ -78,7 +76,7 @@
 								},
 								{
 									"key": "Company",
-									"value": "Intuit"
+									"value": "CE"
 								}
 							]
 						},
@@ -970,7 +968,7 @@
 	],
 	"variable": [
 		{
-			"id": "4d185771-3d89-44f5-975e-017a15d7dee7",
+			"id": "10c78923-970d-4ec3-8b4a-c0ef2b12c7dc",
 			"key": "baseUrl",
 			"value": "localhost:3000",
 			"type": "string"
