@@ -27,7 +27,9 @@
 									"pm.test(\"Response time is less than 200ms\", function () {\r",
 									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
 									"});\r",
-									""
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
 								],
 								"type": "text/javascript"
 							}
@@ -38,8 +40,6 @@
 								"id": "72e14f0f-7195-4dd0-a46b-1728979b92d7",
 								"exec": [
 									"\r",
-									"\r",
-									"pm.collectionVariables.unset(\"variable_key\");\r",
 									"pm.environment.unset(\"variable_key\");\r",
 									"pm.sendRequest(\"https://postman-echo.com/get\", function (err, response) {\r",
 									"    console.log(response.json());\r",
@@ -58,7 +58,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://postman-echo.com/get?Company=CE",
+							"raw": "https://postman-echo.com/get?Company=Apple",
 							"protocol": "https",
 							"host": [
 								"postman-echo",
@@ -76,7 +76,7 @@
 								},
 								{
 									"key": "Company",
-									"value": "CE"
+									"value": "Apple"
 								}
 							]
 						},
@@ -968,7 +968,7 @@
 	],
 	"variable": [
 		{
-			"id": "10c78923-970d-4ec3-8b4a-c0ef2b12c7dc",
+			"id": "c2d322cf-7454-430b-8005-d38a46138657",
 			"key": "baseUrl",
 			"value": "localhost:3000",
 			"type": "string"
