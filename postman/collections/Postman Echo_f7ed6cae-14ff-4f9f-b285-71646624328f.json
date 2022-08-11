@@ -18,9 +18,7 @@
 								"id": "45ceffde-c9e4-48dd-b26a-50bf952ef1e7",
 								"exec": [
 									"\r",
-									"pm.test(\"Status code is 200\", function () {\r",
-									"    pm.response.to.have.status(200);\r",
-									"});\r",
+									"\r",
 									"pm.test(\"Response time is less than 500ms\", function () {\r",
 									"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
 									"});\r",
@@ -46,7 +44,10 @@
 									"pm.sendRequest(\"https://postman-echo.com/get\", function (err, response) {\r",
 									"    console.log(response.json());\r",
 									"});\r",
-									"pm.variables.get(\"variable_key\");"
+									"pm.variables.get(\"variable_key\");\r",
+									"pm.sendRequest(\"https://postman-echo.com/get\", function (err, response) {\r",
+									"    console.log(response.json());\r",
+									"});"
 								],
 								"type": "text/javascript"
 							}
@@ -57,10 +58,20 @@
 						"disableBodyPruning": true
 					},
 					"request": {
+						"auth": {
+							"type": "digest",
+							"digest": [
+								{
+									"key": "algorithm",
+									"value": "MD5",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://postman-echo.com/get?Company=WGU",
+							"raw": "https://postman-echo.com/get?Company=Economical",
 							"protocol": "https",
 							"host": [
 								"postman-echo",
@@ -78,7 +89,7 @@
 								},
 								{
 									"key": "Company",
-									"value": "WGU"
+									"value": "Economical"
 								}
 							]
 						},
@@ -864,8 +875,8 @@
 									"    pm.test(\"Status code is 200\", function () {\r",
 									"      pm.response.to.have.status(200);\r",
 									"    });\r",
-									"    pm.test(\"Response time is less than 500ms\", function () {\r",
-									"        pm.expect(pm.response.responseTime).to.be.below(500);\r",
+									"    pm.test(\"Response time is less than 1000ms\", function () {\r",
+									"        pm.expect(pm.response.responseTime).to.be.below(1000);\r",
 									"    });\r",
 									"    pm.test(\"Content-Type is present\", function () {\r",
 									"        pm.response.to.have.header(\"Content-Type\");\r",
@@ -970,7 +981,7 @@
 	],
 	"variable": [
 		{
-			"id": "99024472-3c72-4172-b64a-07229ef7f330",
+			"id": "ff054c30-2436-410b-a5eb-14c7485d0311",
 			"key": "baseUrl",
 			"value": "localhost:3000",
 			"type": "string"

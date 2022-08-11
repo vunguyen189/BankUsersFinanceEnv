@@ -1,8 +1,8 @@
 openapi: 3.0.0
 info:
   version: '2.1.2444'
-  title: 'Bank Users Goodbye  GitHub GOODBYE'
-  description: 'this is where the descriptions is to WGU HELLO SERGIO'
+  title: 'Bank Users'
+  description: 'this is where the descriptions is to ECONOMICAL'
 servers:
   - url: 'localhost:3000'
 paths:
