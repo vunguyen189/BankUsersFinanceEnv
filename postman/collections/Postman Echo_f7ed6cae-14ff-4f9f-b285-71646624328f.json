@@ -30,6 +30,10 @@
 									"});\r",
 									"pm.test(\"Response time is less than 200ms\", function () {\r",
 									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
 									"});"
 								],
 								"type": "text/javascript"
@@ -41,10 +45,9 @@
 								"id": "72e14f0f-7195-4dd0-a46b-1728979b92d7",
 								"exec": [
 									"\r",
-									"pm.sendRequest(\"https://postman-echo.com/get\", function (err, response) {\r",
-									"    console.log(response.json());\r",
-									"});\r",
+									"\r",
 									"pm.variables.get(\"variable_key\");\r",
+									"\r",
 									"pm.sendRequest(\"https://postman-echo.com/get\", function (err, response) {\r",
 									"    console.log(response.json());\r",
 									"});"
@@ -71,7 +74,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://postman-echo.com/get?Company=Economical",
+							"raw": "https://postman-echo.com/get?Company=rockwell",
 							"protocol": "https",
 							"host": [
 								"postman-echo",
@@ -89,7 +92,7 @@
 								},
 								{
 									"key": "Company",
-									"value": "Economical"
+									"value": "rockwell"
 								}
 							]
 						},
@@ -981,7 +984,7 @@
 	],
 	"variable": [
 		{
-			"id": "ff054c30-2436-410b-a5eb-14c7485d0311",
+			"id": "6e81f0b3-d41a-4a92-93f8-d8f8ac5c5767",
 			"key": "baseUrl",
 			"value": "localhost:3000",
 			"type": "string"
