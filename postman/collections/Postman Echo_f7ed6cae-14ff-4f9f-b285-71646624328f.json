@@ -32,9 +32,8 @@
 									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
 									"});\r",
 									"\r",
-									"pm.test(\"Status code is 200\", function () {\r",
-									"    pm.response.to.have.status(200);\r",
-									"});"
+									"\r",
+									""
 								],
 								"type": "text/javascript"
 							}
@@ -50,7 +49,8 @@
 									"\r",
 									"pm.sendRequest(\"https://postman-echo.com/get\", function (err, response) {\r",
 									"    console.log(response.json());\r",
-									"});"
+									"});\r",
+									"pm.globals.set(\"variable_key\", \"variable_value\");"
 								],
 								"type": "text/javascript"
 							}
@@ -74,7 +74,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://postman-echo.com/get?Company=rockwell",
+							"raw": "https://postman-echo.com/get?Company=NLG",
 							"protocol": "https",
 							"host": [
 								"postman-echo",
@@ -92,7 +92,7 @@
 								},
 								{
 									"key": "Company",
-									"value": "rockwell"
+									"value": "NLG"
 								}
 							]
 						},
@@ -984,7 +984,7 @@
 	],
 	"variable": [
 		{
-			"id": "6e81f0b3-d41a-4a92-93f8-d8f8ac5c5767",
+			"id": "8abe9e9e-c266-435d-8358-9412c78b6721",
 			"key": "baseUrl",
 			"value": "localhost:3000",
 			"type": "string"
