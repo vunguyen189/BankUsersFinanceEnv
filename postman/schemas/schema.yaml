@@ -1,13 +1,14 @@
 openapi: 3.0.0
 info:
   version: '2.1.2'
-  title: 'Bank Users EQUINIX GOODBYE'
+  title: 'Bank Users ARCH HELLO'
 servers:
   - url: 'localhost:3000'
 paths:
   /user:
     get:
-      summary: 'Sample endpoint: Returns details about a particular user'
+      summary: 'Sample endpoint: Returns details about a particular user
+      security
       operationId: listUser
       tags:
         - user
