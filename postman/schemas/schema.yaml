@@ -1,7 +1,7 @@
 openapi: 3.0.0
 info:
   version: '2.1.2'
-  title: 'Bank Users ARCH HELLO'
+  title: 'Bank Users ARCH GOODBYE'
 servers:
   - url: 'localhost:3000'
 paths:
