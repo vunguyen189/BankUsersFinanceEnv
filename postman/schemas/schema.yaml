@@ -1,7 +1,7 @@
 openapi: 3.0.0
 info:
   version: '2.1.2'
-  title: 'Bank Users EQUINIX HELLO'
+  title: 'Bank Users EQUINIX GOODBYE'
 servers:
   - url: 'localhost:3000'
 paths:
