@@ -2,7 +2,7 @@ openapi: 3.0.0
 info:
   version: '2.1.2444'
   title: 'Bank Users'
-  description: 'this is where the descriptions $1.50 hot dogs for luncH CHICKEN BAKE ROTISARIE CHICKEN'
+  description: 'this is where the descriptions NetApp Demo'
 servers:
   - url: 'localhost:3000'
 paths:
