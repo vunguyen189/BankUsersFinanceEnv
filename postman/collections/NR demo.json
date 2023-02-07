@@ -1,0 +1,160 @@
+{
+	"info": {
+		"_postman_id": "cff8c0b8-c7ea-4923-9be6-149992d01032",
+		"name": "NR demo",
+		"description": "this is where the descriptions DEMO NEWRELIC",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "15405603-cff8c0b8-c7ea-4923-9be6-149992d01032"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "Sample endpoint: Returns details about a particular user",
+					"id": "b68fca5c-a16a-4f8e-927e-0d40e78cbd23",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/user?id=75525906",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"user"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "75525906",
+									"description": "(Required) ID of the user"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "4d4b321a-1719-46b9-a562-38018c0ffa20",
+							"name": "Sample response: Details about a user by ID",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: basic",
+										"key": "Authorization",
+										"value": "Basic <credentials>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/user?id=75525906",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"user"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "75525906"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"disabled": false,
+									"description": "A link to the next page of responses",
+									"key": "x-next",
+									"value": "sed nulla veniam"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"id\": 28255027,\n  \"name\": \"adipisicing magna aliqu\",\n  \"tag\": \"cillum ea Excepteur\"\n}"
+						},
+						{
+							"id": "99a5bf42-2fa8-4023-ba78-1bcb8122c2ec",
+							"name": "Unexpected error",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: basic",
+										"key": "Authorization",
+										"value": "Basic <credentials>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/user?id=75525906",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"user"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "75525906"
+										}
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"code\": 16490641,\n  \"message\": \"amet\"\n}"
+						}
+					]
+				}
+			],
+			"id": "d7239a13-2e93-4321-a9f5-17b14865f030"
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "username",
+				"value": "{{basicAuthUsername}}",
+				"type": "string"
+			},
+			{
+				"key": "password",
+				"value": "{{basicAuthPassword}}",
+				"type": "string"
+			}
+		]
+	},
+	"variable": [
+		{
+			"id": "8339abaa-0bc1-41bf-ab6c-e779b91523fd",
+			"key": "baseUrl",
+			"value": "localhost:3000",
+			"type": "string"
+		}
+	]
+}

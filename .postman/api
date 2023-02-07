@@ -6,6 +6,7 @@ id = 4b1e1bbe-9acc-4085-b1a1-b6aa8ee8b2a1
 [relations.collections]
 rootDirectory = postman/collections
 files[] = {"id":"15405603-dfe3f9d3-3b25-4313-b8c6-36b48ea3e0bb","path":"Bank Users 2.1.json","metaData":{}}
+files[] = {"id":"15405603-cff8c0b8-c7ea-4923-9be6-149992d01032","path":"NR demo.json","metaData":{}}
 
 [relations.collections.metaData]
 
