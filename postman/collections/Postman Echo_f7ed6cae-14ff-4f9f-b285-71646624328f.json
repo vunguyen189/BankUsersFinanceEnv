@@ -1,9 +1,10 @@
 {
 	"info": {
-		"_postman_id": "e58ab08a-8f50-432e-b570-a29e9374d1d7",
+		"_postman_id": "39d26736-fb38-430b-bd99-7ae6ecab5a32",
 		"name": "Postman Echo",
 		"description": "![](https://i.imgur.com/ymcwlzB.gif)\n\nPostman Echo is service you can use to test your REST clients and make sample API calls. It provides endpoints for GET, POST, PUT, various auth mechanisms and other utility endpoints.\n\nThe documentation for the endpoints as well as example responses can be found at [https://postman-echo.com](https://postman-echo.com)",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "15405603-39d26736-fb38-430b-bd99-7ae6ecab5a32"
 	},
 	"item": [
 		{
@@ -15,7 +16,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "45ceffde-c9e4-48dd-b26a-50bf952ef1e7",
+								"id": "ef01a000-5948-44f9-98ad-66da2fd23f26",
 								"exec": [
 									"\r",
 									"pm.test(\"Status code is 200\", function () {\r",
@@ -35,7 +36,7 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "72e14f0f-7195-4dd0-a46b-1728979b92d7",
+								"id": "0cb8d280-8d7b-4725-a1cf-3570a4868a8a",
 								"exec": [
 									"\r",
 									"\r",
@@ -50,7 +51,7 @@
 							}
 						}
 					],
-					"id": "34dee59d-752b-4280-ba91-f9aeab68726a",
+					"id": "65130ecc-a692-4f42-9aec-30ee444f7b02",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -84,7 +85,7 @@
 					},
 					"response": [
 						{
-							"id": "360643e8-a3e1-433d-bcd4-c7927f899ad2",
+							"id": "3e24492f-9c95-4cc7-8f59-2e0e41ddfb17",
 							"name": "GET Request Woops",
 							"originalRequest": {
 								"method": "GET",
@@ -114,6 +115,7 @@
 							"status": "- OK",
 							"code": 200,
 							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "html",
 							"header": [
 								{
 									"key": "Content-Encoding",
@@ -157,7 +159,7 @@
 							"body": "{\n    \"args\": {\n        \"foo1\": \"bar\",\n        \"foo2\": \"bar2\"\n    },\n    \"headers\": {\n        \"x-forwarded-proto\": \"https\",\n        \"host\": \"postman-echo.com\",\n        \"accept\": \"*/*\",\n        \"accept-encoding\": \"gzip, deflate\",\n        \"cache-control\": \"no-cache\",\n        \"cookie\": \"sails.sid=s%3ASF4FLaRniSy3MriH4rK1Y1FUuhJ89c2E.pSGFzR%2BH1RhijyvLb7Qbsk33VPbBssAN8hxiH9EDZiQ\",\n        \"postman-token\": \"6d616ebc-b08e-47d1-93fb-485ec44cfd86\",\n        \"user-agent\": \"PostmanRuntime/7.16.3\",\n        \"x-forwarded-port\": \"443\"\n    },\n    \"url\": \"https://postman-echo.com/get?foo1=bar&foo2=bar2\"\n}"
 						},
 						{
-							"id": "e66f03e7-8d4e-4f7a-a367-3f3fa1a8b747",
+							"id": "ad0cf8ed-ce74-4c53-b6c6-90275623d790",
 							"name": "GET Request CBIC",
 							"originalRequest": {
 								"method": "GET",
@@ -188,6 +190,7 @@
 							"status": "OK",
 							"code": 500,
 							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "html",
 							"header": [
 								{
 									"key": "Date",
@@ -223,7 +226,7 @@
 							"body": "{\n    \"args\": {\n        \"foo1\": \"bar1\",\n        \"Company\": \"CIBC\"\n    },\n    \"headers\": {\n        \"x-forwarded-proto\": \"https\",\n        \"x-forwarded-port\": \"443\",\n        \"host\": \"postman-echo.com\",\n        \"x-amzn-trace-id\": \"Root=1-624223f0-07f056543351a1fa1977c24b\",\n        \"user-agent\": \"PostmanRuntime/7.29.0\",\n        \"accept\": \"*/*\",\n        \"cache-control\": \"no-cache\",\n        \"postman-token\": \"5b802411-1172-49ca-8c5d-b73a70515ab2\",\n        \"accept-encoding\": \"gzip, deflate, br\",\n        \"cookie\": \"sails.sid=s%3AshtwCOaVlS20Y3LAJt_tnVZM2XmDy_9h.aHhtLxN67y5jWCJXoMLsM2ID7%2BUq85o6YxmgIyTFs0A\"\n    },\n    \"url\": \"https://postman-echo.com/get?foo1=bar1&Company=CIBC\"\n}"
 						},
 						{
-							"id": "2b3003b6-56f3-4fed-9c34-af35be31ae2d",
+							"id": "02277c0d-e91e-4f24-acfa-d95d9a4459b7",
 							"name": "Barbados",
 							"originalRequest": {
 								"method": "GET",
@@ -255,6 +258,7 @@
 							"status": "OK",
 							"code": 200,
 							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "html",
 							"header": [
 								{
 									"key": "Date",
@@ -290,7 +294,7 @@
 							"body": "{\n    \"args\": {\n        \"foo1\": \"FCIB\"\n    },\n    \"headers\": {\n        \"x-forwarded-proto\": \"https\",\n        \"x-forwarded-port\": \"443\",\n        \"host\": \"postman-echo.com\",\n        \"x-amzn-trace-id\": \"Root=1-62696125-6c1061860d4d219c4488ec5d\",\n        \"user-agent\": \"PostmanRuntime/7.29.0\",\n        \"accept\": \"*/*\",\n        \"cache-control\": \"no-cache\",\n        \"postman-token\": \"94daef66-f2c5-48a1-a26f-ea33741ba2a5\",\n        \"accept-encoding\": \"gzip, deflate, br\"\n    },\n    \"url\": \"https://postman-echo.com/get?foo1=FCIB\"\n}"
 						},
 						{
-							"id": "301f59f7-9d5d-4da9-9428-4dd0167e21bc",
+							"id": "3fab96f1-c325-4882-9c7a-b6ea1d506656",
 							"name": "Trimble2",
 							"originalRequest": {
 								"method": "GET",
@@ -322,6 +326,7 @@
 							"status": "OK",
 							"code": 200,
 							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "html",
 							"header": [
 								{
 									"key": "Date",
@@ -357,7 +362,7 @@
 							"body": "{\n    \"args\": {\n        \"foo1\": \"Trimble2UPDATE\"\n    },\n    \"headers\": {\n        \"x-forwarded-proto\": \"https\",\n        \"x-forwarded-port\": \"443\",\n        \"host\": \"postman-echo.com\",\n        \"x-amzn-trace-id\": \"Root=1-62697df4-7edcc9447dc6677b3f128d1d\",\n        \"user-agent\": \"PostmanRuntime/7.29.0\",\n        \"accept\": \"*/*\",\n        \"cache-control\": \"no-cache\",\n        \"postman-token\": \"0ee99895-b545-44dc-844f-eda45d3e434c\",\n        \"accept-encoding\": \"gzip, deflate, br\",\n        \"cookie\": \"sails.sid=s%3AWxHGx9W5pxsZK_nkR94ahm-pbeaIz2Xd.39vXkfv6xah%2BemfQ2ZK%2BofQ3%2B3LtLgD%2BbPI3oUQmJN0\"\n    },\n    \"url\": \"https://postman-echo.com/get?foo1=Trimble2\"\n}"
 						},
 						{
-							"id": "be6e7aef-3201-4be2-ab1f-7547000def57",
+							"id": "59bc5433-c380-44d6-bae1-8841392b8525",
 							"name": "GET Request Microsoft",
 							"originalRequest": {
 								"method": "GET",
@@ -389,6 +394,7 @@
 							"status": "OK",
 							"code": 200,
 							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "html",
 							"header": [
 								{
 									"key": "Date",
@@ -424,7 +430,7 @@
 							"body": "{\n    \"args\": {\n        \"foo1\": \"Microsoft new edit\"\n    },\n    \"headers\": {\n        \"x-forwarded-proto\": \"https\",\n        \"x-forwarded-port\": \"443\",\n        \"host\": \"postman-echo.com\",\n        \"x-amzn-trace-id\": \"Root=1-627be159-175b451266326a017413061a\",\n        \"user-agent\": \"PostmanRuntime/7.29.0\",\n        \"accept\": \"*/*\",\n        \"cache-control\": \"no-cache\",\n        \"postman-token\": \"b478bfa2-9ec9-4c57-97a1-a48d558caf70\",\n        \"accept-encoding\": \"gzip, deflate, br\",\n        \"cookie\": \"sails.sid=s%3AK6ceYnZYjjfF2mNX8f9zxuGbbkoVA08J.rz8f%2F7nE%2B788dmyymnnWYo7UAkF33866CoypXIBNKW8\"\n    },\n    \"url\": \"https://postman-echo.com/get?foo1=Microsoft\"\n}"
 						},
 						{
-							"id": "b524bd34-1008-48f1-afd0-5e83e55fdf7d",
+							"id": "cd7a14dd-daa5-4361-8ccc-f0b7562ecac5",
 							"name": "MSFT",
 							"originalRequest": {
 								"method": "GET",
@@ -460,6 +466,7 @@
 							"status": "OK",
 							"code": 200,
 							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "html",
 							"header": [
 								{
 									"key": "Date",
@@ -502,7 +509,7 @@
 				},
 				{
 					"name": "POST Raw Text",
-					"id": "67285a39-5e29-43e8-9458-e691a5ceb51a",
+					"id": "5f232c56-edf9-434f-817c-b13680f7c9ec",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -530,7 +537,7 @@
 				},
 				{
 					"name": "POST From Data",
-					"id": "0b35c937-a839-4a3f-97ae-ca50a2f2ded5",
+					"id": "e8eb12bc-b17f-4d83-96b8-d289c2674790",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -569,7 +576,7 @@
 				},
 				{
 					"name": "PUT Request",
-					"id": "796d2789-9e9a-4d3b-990f-8f1f9d0959b9",
+					"id": "07037b73-9b39-4270-97a1-87eb072f30a0",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -604,7 +611,7 @@
 				},
 				{
 					"name": "PATCH Request",
-					"id": "0a426241-5d94-4285-a03c-7b367c7c2aeb",
+					"id": "cef20ea7-f8e6-42cd-a45c-0f965ee31a38",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -639,7 +646,7 @@
 				},
 				{
 					"name": "DELETE Request",
-					"id": "00b763c4-e743-40de-a6cc-3649f374f75b",
+					"id": "3edabd27-bf64-49a0-81cd-ed0a864685c6",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -673,13 +680,13 @@
 					"response": []
 				}
 			],
-			"id": "73cd1c83-bb55-4320-8129-6ea385a9c059",
+			"id": "aa33ce0b-03d6-464e-9409-69935fbde812",
 			"description": "<p>HTTP has multiple request \"verbs\", such as <code>GET</code>, <code>PUT</code>, <code>POST</code>, <code>DELETE</code>,\n<code>PATCH</code>, <code>HEAD</code>, etc. </p>\n<p>An HTTP Method (verb) defines how a request should be interpreted by a server. \nThe endpoints in this section demonstrate various HTTP Verbs. Postman supports \nall the HTTP Verbs, including some rarely used ones, such as <code>PROPFIND</code>, <code>UNLINK</code>, \netc.</p>\n<p>For details about HTTP Verbs, refer to <a href=\"http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9\">RFC 2616</a></p>",
 			"event": [
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "78b88479-80ce-41b5-ae48-ba78d8adbf3a",
+						"id": "2b2f0ecb-50b4-4a17-951b-c90c75681941",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -689,7 +696,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "8c59b9cb-30e8-4c33-8ba1-ca399e7e7972",
+						"id": "a85bb485-35f4-479d-b668-660ba8cdb1d3",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -703,7 +710,7 @@
 			"item": [
 				{
 					"name": "Request Headers",
-					"id": "fd01dc0c-b4d9-4d14-a737-d312b24e8d3c",
+					"id": "af15b75a-f31b-410f-b807-5eb2b72faf28",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -725,7 +732,7 @@
 					},
 					"response": [
 						{
-							"id": "d5139ff5-9c06-432d-88bf-4412d47dc91d",
+							"id": "d7b464b9-12db-4dc8-941c-4a29f3bb83f1",
 							"name": "my-sample-header",
 							"originalRequest": {
 								"method": "GET",
@@ -745,6 +752,7 @@
 							"status": "OK",
 							"code": 200,
 							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "html",
 							"header": [
 								{
 									"key": "Content-Encoding",
@@ -787,7 +795,7 @@
 				},
 				{
 					"name": "Response Headers",
-					"id": "5b7a6987-c33c-4e32-a6fd-45f305b66e24",
+					"id": "4a30b69c-e454-4c8c-9689-8ff80bdb7055",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -820,13 +828,13 @@
 					"response": []
 				}
 			],
-			"id": "e95012c4-13e1-4a17-b4c0-ff1c4527d0fb",
+			"id": "4a853e06-6db4-4398-b8ea-0b8d7f18f1f1",
 			"description": "<p>The following set of endpoints allow one to see the headers being sent as part of a request and to get a custom set of headers as part of response.</p>\n<p>HTTP header fields provide required information about the request or response, or about the object sent in the message body. Both request headers and response headers can be controlled using these endpoints.</p>",
 			"event": [
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "a6190a5c-1cb2-4962-a827-c8edfb9d848f",
+						"id": "ed9511b5-a572-4f3a-a289-44409a4e95b3",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -836,7 +844,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "fe7c2344-178a-4d14-9dcb-98e545f4375f",
+						"id": "eeac8d86-f067-4ccf-9b83-27e4270d2db9",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -854,7 +862,7 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "389c4a5c-2ccf-4cdb-8e34-606af1d46514",
+								"id": "72ed56e2-20fc-4a8e-83e0-946056c2834b",
 								"exec": [
 									"//declaring commonTests as a variable with the 5 test assertions\r",
 									"var commonTests = () => {\r",
@@ -886,7 +894,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "5307666e-e034-437e-b1c0-a3248cf8b19e",
+								"id": "aebf298a-c433-4262-9a63-5b5f954e6e7c",
 								"exec": [
 									"eval(pm.globals.get(\"commonTests\"))();\r",
 									""
@@ -895,7 +903,7 @@
 							}
 						}
 					],
-					"id": "10e63cab-3ecd-48ea-af5f-ddfaf5257228",
+					"id": "949c32db-2da6-4d36-9db5-e6c96fa05f3f",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -922,7 +930,7 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "389c4a5c-2ccf-4cdb-8e34-606af1d46514",
+								"id": "f0d2a812-f0f5-4d82-b225-7dd6e5c67da0",
 								"exec": [
 									""
 								],
@@ -932,7 +940,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "5307666e-e034-437e-b1c0-a3248cf8b19e",
+								"id": "7280cd04-4433-4a6f-b92c-bac51875e34b",
 								"exec": [
 									"eval(pm.globals.get(\"commonTests\"))();\r",
 									""
@@ -941,7 +949,7 @@
 							}
 						}
 					],
-					"id": "29b7884d-b4d7-41c1-9e5f-a7812543ca0e",
+					"id": "18ae9f75-9447-421c-bb9a-2cbcd09a8f3d",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -963,7 +971,7 @@
 					"response": []
 				}
 			],
-			"id": "59f834e9-452b-4d73-88e6-8e88be4565f1"
+			"id": "2b49c675-52c7-47dc-af27-34b942a0c80a"
 		}
 	],
 	"variable": [
