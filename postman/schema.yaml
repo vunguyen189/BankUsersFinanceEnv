@@ -2,7 +2,10 @@ openapi: 3.0.0
 info:
   version: '2.1.2444'
   title: 'Bank Users'
-  description: 'this is where the test 3/8/23'
+  description: 'add scope here HELLO STARBUCKS TEAM I NEED SOME COFFEE'
+  contact:
+    email: support@example.com
+    url: https://example.com/support
 servers:
   - url: 'localhost:3000'
 paths:

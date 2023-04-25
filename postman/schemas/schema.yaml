@@ -2,6 +2,7 @@ openapi: 3.0.0
 info:
   version: '2.1.2'
   title: 'Bank Users'
+  description: add scope here JHA
 servers:
   - url: 'localhost:3000'
 paths:
