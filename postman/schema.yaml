@@ -2,10 +2,13 @@ openapi: 3.0.0
 info:
   version: '2.1.2444'
   title: 'Bank Users'
-  description: 'add scope here delete note'
+  description: 'add scope here delete note HELLO STARBUCKS'
   contact:
     email: support@example.com
     url: https://example.com/support
+  license:
+    name: Apache 2.0
+    url: https://opensource.org/licenses/Apache-2.0
 servers:
   - url: 'localhost:3000'
 paths:
