@@ -2,7 +2,7 @@ openapi: 3.0.0
 info:
   version: '2.1.2444'
   title: 'Bank Users'
-  description: 'add scope here abc'
+  description: 'add scope here Wayfair hello'
   contact:
     email: support@example.com
     url: https://example.com/support
