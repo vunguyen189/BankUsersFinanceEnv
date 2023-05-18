@@ -2,7 +2,7 @@ openapi: 3.0.0
 info:
   version: '2.1.2444'
   title: 'Bank Users'
-  description: 'add scope hello Chandra from SJ'
+  description: 'add scope GOODBYE Chandra from SJ'
   termsOfService: https://example.com/tos
   contact:
     email: support@example.com
