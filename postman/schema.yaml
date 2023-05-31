@@ -2,10 +2,10 @@ openapi: 3.0.0
 info:
   version: '2.1.2444'
   title: 'Bank Users'
-  description: 'add scope GOODBYE Chandra from SJ'
-  termsOfService: https://example.com/tos
+  description: 'add scope from FTCU' 
+  #termsOfService: https://example.com/tos
   contact:
-    email: support@example.com
+    #email: support@example.com
     url: https://example.com/support
   license:
     name: Apache 2.0
