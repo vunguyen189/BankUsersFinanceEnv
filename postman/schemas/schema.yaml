@@ -1,14 +1,14 @@
 openapi: 3.0.0
 info:
-  version: '2.1.2'
-  title: 'Bank Users ARCH GOODBYE'
+  version: '2.1.2444'
+  title: 'Bank Users'
+  description: 'this is where the descriptions'
 servers:
   - url: 'localhost:3000'
 paths:
   /user:
     get:
-      summary: 'Sample endpoint: Returns details about a particular user
-      security
+      summary: 'Sample endpoint: Returns details about a particular user'
       operationId: listUser
       tags:
         - user
