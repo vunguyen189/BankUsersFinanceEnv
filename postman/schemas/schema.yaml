@@ -1,11 +1,12 @@
 openapi: 3.0.0
 info:
   version: '2.1.2444'
-  title: 'Bank Users GOODBYE BR TEAM'
-  description: 'this is where the descriptions aa'
+  title: 'Bank Users'
+  description: 'this is where the descriptions Oct '
   license:
     name: VuFinDemo
     url: www.postman.com
+  #termsOfService: https://example.com/tos 
 servers:
   - url: 'localhost:3000'
 paths:
