@@ -2,7 +2,7 @@ openapi: 3.0.0
 info:
   version: '2.1.2444'
   title: 'Bank Users'
-  description: 'this is where the descriptions GOODBYE HAPPY MONDAY'
+  description: 'this is where the descriptions CLEARCOVER DEMO'
   license:
     name: VuFinDemo
     url: www.postman.com
