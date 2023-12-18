@@ -2,7 +2,7 @@ openapi: 3.0.0
 info:
   version: '2.1.2444'
   title: 'Bank Users'
-  description: 'this is where the descriptions 'hello Lord Abbett'
+  description: 'this is where the descriptions 'GOODBYE Lord Abbett'
   license:
     name: VuFinDemo
     url: www.postman.com
